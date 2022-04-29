@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Adieu';
+  src: url(../fonts/adieu-regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Adieu';
+  src: url(../fonts/adieu-bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Adieu';
+  src: url(../fonts/adieu-black.otf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url(../fonts/gotham-medium.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url(../fonts/gotham-bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url(../fonts/gotham-black.otf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Monument Extended';
+  src: url(../fonts/monumentextended-regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Monument Extended';
+  src: url(../fonts/monumentextended-ultrabold.otf);
+  font-weight: 900;
+}
+
+/* MAIN STYLES */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  cursor: pointer;
+}
+
+/* HEADER STYLES */
+header {
+  /* border: 1px solid red; */
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  /* line-height: 2; */
+  width: 100%;
+  height: 4rem;
+  z-index: 999;
+  padding: 0 5rem;
+  font-family: 'Monument Extended';
+  color: white;
+}
+header h1 {
+  font-size: 3rem;
+}
+.nav-icons {
+  font-size: 1.5rem;
+  margin-left: 1em;
+}
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+nav ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+/* HERO STYLES */
+.hero {
+  background-image: url("../images/hero-background.png");
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.gradient {
+  margin-top: 4rem;
+}
