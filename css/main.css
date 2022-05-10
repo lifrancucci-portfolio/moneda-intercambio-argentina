@@ -369,6 +369,7 @@ nav ul {
   width: 50%;
 }
 .section-comprar .panel-right {
+  background: var(--gradient-clr-3);
   background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
   display: flex;
   flex-direction: column;
@@ -481,4 +482,46 @@ nav ul {
   display: none;
   border-top: 1px solid black;
   padding: 2rem .5rem;
+}
+
+/* CONTACTO STYLES */
+.section-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gotham';
+  text-align: center;
+  line-height: 1.5;
+  background: var(--gradient-clr-3);
+  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
+}
+.section-contacto h2 {
+  font-family: 'Adieu';
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.line-contacto {
+  border: 1px solid black;
+  width: 3rem;
+  margin: 2rem;
+}
+.section-contacto-subtitle {
+  font-family: 'Adieu';
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.section-contacto-text {
+  width: 400px;
+}
+.contact-type {
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+.contact-phone,
+.contact-mail {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
