@@ -525,3 +525,43 @@ nav ul {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+/* FOOTER STYLES */
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  padding: 2rem 10vw;
+  font-family: 'Gotham';
+  /* font-weight: lighter; */
+}
+.footer-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 3rem;
+  width: 50%;
+}
+.footer-title {
+  font-family: 'Adieu';
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer-panel p {
+  font-size: .7rem;
+  padding: .5rem 0;
+}
+.footer-subtitle {
+  text-transform: uppercase;
+}
+.footer-icon {
+  padding: .5rem 0;
+}
+.footer-logo {
+  width: 250px;
+}
+footer .panel-right {
+  border-left: 1px solid white;
+}
