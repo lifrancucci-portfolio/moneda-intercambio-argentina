@@ -3,6 +3,7 @@
   --gradient-clr-1: rgba(125, 233, 255, 1);
   --gradient-clr-2: rgba(164,182,245,1);
   --gradient-clr-3: rgba(219, 189, 254, 1);
+  --clr-mid: rgba(225,225,232,255);
 }
 
 /* TYPOGRAPHY */
@@ -316,10 +317,10 @@ nav ul {
   /* border: 1px solid green; */
   width: 50%;
 }
-.panel-left {
+.section-comprar .panel-left {
   position: relative;
 }
-.panel-left::before {
+.section-comprar .panel-left::before {
   content: "";
   position: absolute;
   top: 0;
@@ -332,7 +333,7 @@ nav ul {
   background-position: right;
   filter: brightness(70%);
 }
-.panel-left .panel-content {
+.section-comprar .panel-content {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -367,7 +368,7 @@ nav ul {
   margin: 2rem;
   width: 50%;
 }
-.panel-right {
+.section-comprar .panel-right {
   background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
   display: flex;
   flex-direction: column;
@@ -395,6 +396,8 @@ nav ul {
   align-items: center;
   text-transform: uppercase;
   padding: 3rem;
+  padding-top: 7rem;
+  height: 100vh;
 }
 .encontrar-subtitle {
   font-size: .7rem;
@@ -413,8 +416,62 @@ nav ul {
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin: 2rem 1rem;
 }
 .encontrar-mapa {
-  width: 65%;
-  height: 75%;
+  width: 650px;
+  height: 350px;
+}
+
+/* PREGUNTAS FRECUENTES STYLES */
+.section-preguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-mid);
+  height: 100vh;
+}
+.preguntas-icon {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: .5rem;
+  font-size: 2rem;
+}
+.section-preguntas-text {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 500px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.section-preguntas-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+.section-preguntas-accordion {
+  /* border: 1px solid red; */
+  width: 50%;
+}
+.accordion-question {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: .5rem 1rem;
+  font-size: .7rem;
+}
+.accordion-question:last-child {
+  border-bottom: 1px solid black;
+}
+.accordion-question .question {
+  text-transform: uppercase;
+}
+.section-preguntas-accordion .expand-text {
+  display: none;
 }
