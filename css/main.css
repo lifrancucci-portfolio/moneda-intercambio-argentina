@@ -100,14 +100,14 @@ nav ul {
 
 /* SECTIONS */
 .section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  padding-top: 4rem;
+  /* padding-top: 4rem; */
   overflow: hidden;
 }
 
@@ -218,71 +218,71 @@ nav ul {
 
 /* MERCADO STYLES */
 .section-mercado {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
   overflow: hidden;
 }
 .mercado-promo {
   position: relative;
-  left: 42%;
-  top: 6rem;
+  left: 40%;
+  top: 5rem;
   background-color: var(--gradient-clr-1);
   color: white;
+  font-family: 'Adieu';
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.5;
   padding: .5rem 10rem;
   transform: rotate(45deg);
 }
 .mercado-promo .first-line {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .mercado-promo .second-line {
-  font-size: .7rem;
+  font-size: 1rem;
 }
 .logo-mm {
   margin-top: -2rem;
-  width: 100px;
+  width: 180px;
+  margin: 1rem;
 }
 .mercado-text {
-  width: 450px;
+  /* border: 1px solid red; */
+  width: 500px;
   line-height: 1.2;
-  margin: 1rem;
+  /* margin: 1rem; */
 }
 .mercado-text p {
   font-family: 'Gotham';
-  font-size: .7rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .mercado-text h2 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   padding-bottom: 1rem;
 }
 .mercado-text .text-body {
   text-transform: none;
 }
-
 .info-cards {
   /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* margin: 2rem; */
 }
 .info-card {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  width: 230px;
-  height: 200px;
+  margin: 2.5rem 1rem;
+  width: 320px;
+  height: 280px;
   text-transform: uppercase;
 }
 .info-card-background {
-  padding: 1.5rem;
+  padding: 2rem;
   width: 100%;
   height: 100%;
 }
@@ -303,24 +303,25 @@ nav ul {
   height: 100%;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: center
+  padding: .5rem;
 }
 .info-card-icon {
-  height: 5rem;
+  height: 7rem;
+  margin-top: .5rem;
 }
 .info-card-title {
-  font-size: .7rem;
+  /* font-size: .7rem; */
   font-weight: bold;
   line-height: 2;
 }
 .line-info-card {
   border: 1px solid black;
   width: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
+  margin: 1rem;
 }
 .info-card-link {
-  font-size: .5rem;
+  font-size: .8rem;
 }
 
 /* CÓMO COMPRAR STYLES */
