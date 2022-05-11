@@ -451,7 +451,7 @@ nav ul {
 .preguntas-icon {
   border: 1px solid black;
   border-radius: 50%;
-  padding: .5rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 .section-preguntas-text {
@@ -465,11 +465,15 @@ nav ul {
   margin-bottom: 2rem;
 }
 .section-preguntas-text h2 {
+  font-family: 'Adieu';
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 1rem;
+  margin: 2rem;
 }
+/* .section-preguntas-text p {
+  font-family: 'Gotham';
+} */
 .section-preguntas-accordion {
   /* border: 1px solid red; */
   width: 60%;
@@ -478,13 +482,13 @@ nav ul {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  font-size: .7rem;
+  font-size: 1rem;
 }
 .question-display {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid black;
-  padding: .5rem .5rem;
+  padding: 1rem .5rem;
 }
 .accordion-question:last-child {
   border-bottom: 1px solid black;
