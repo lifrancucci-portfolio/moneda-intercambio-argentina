@@ -504,6 +504,7 @@ nav ul {
 
 /* CONTACTO STYLES */
 .section-contacto {
+  height: 65vh;
   font-family: 'Gotham';
   text-align: center;
   line-height: 1.5;
@@ -528,7 +529,7 @@ nav ul {
   margin-bottom: 1rem;
 }
 .section-contacto-text {
-  width: 400px;
+  width: 500px;
 }
 .contact-type {
   text-transform: uppercase;
@@ -536,7 +537,7 @@ nav ul {
 }
 .contact-phone,
 .contact-mail {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -557,24 +558,29 @@ footer {
   padding: 0 3rem;
   width: 50%;
 }
-.footer-title {
+.footer-panel .footer-title {
   font-family: 'Adieu';
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 .footer-panel p {
-  font-size: .7rem;
+  font-size: 1rem;
+  line-height: 1.5;
   padding: .5rem 0;
 }
 .footer-subtitle {
   text-transform: uppercase;
 }
+footer .panel-right {
+  padding-left: 5rem;
+}
 .footer-icon {
+  font-size: 1.5rem;
   padding: .5rem 0;
 }
 .footer-logo {
-  width: 250px;
+  width: 300px;
 }
 footer .panel-right {
   border-left: 1px solid white;
