@@ -326,14 +326,12 @@ nav ul {
 
 /* CÓMO COMPRAR STYLES */
 .section-comprar {
-  /* display: flex; */
-  /* border: 1px solid red; */
   flex-direction: row;
 }
 .panel {
-  /* border: 1px solid green; */
   width: 50%;
   height: 100%;
+  padding-top: 6rem;
 }
 .section-comprar .panel-left {
   position: relative;
@@ -356,26 +354,27 @@ nav ul {
   flex-direction: column;
   position: relative;
   align-items: center;
-  padding-top: 4rem;
+  justify-content: center;
   color: white;
 }
 .panel-content h2 {
   display: flex;
+  font-family: 'Adieu';
   text-align: right;
   text-transform: uppercase;
   font-weight: 900;
 }
 .panel-content h2 p:first-child {
-  font-size: 1.3rem;
-  padding-top: .75rem;
-  padding-right: .5rem;
+  font-size: 1.5rem;
+  padding-top: 1.7rem;
+  padding-right: .7rem;
 }
 .panel-content h2 p:last-child {
-  font-size: 5rem;
+  font-size: 7rem;
 }
 .line-comprar {
   border: 1px solid white;
-  width: 2rem;
+  width: 3rem;
   margin: 1rem;
 }
 .panel-content-text {
@@ -383,8 +382,8 @@ nav ul {
   font-weight: normal;
 }
 .comprar-logo {
-  margin: 2rem;
-  width: 50%;
+  margin: 4rem;
+  width: 60%;
 }
 .section-comprar .panel-right {
   background: var(--gradient-clr-3);
@@ -394,18 +393,23 @@ nav ul {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 4rem 5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 .panel-right-step {
   font-family: 'Monument Extended';
-  font-size: 4rem;
+  font-size: 6rem;
   padding-top: 2rem;
+}
+.panel-right-subtitle {
+  font-size: 1.5rem;
+  padding-top: 1rem;
 }
 .panel-right-description {
   color: black;
   font-family: 'Gotham';
-  font-size: .7rem;
-  padding-top: .7rem;
+  font-size: 1rem;
+  padding-top: 1rem;
 }
 
 /* DONDE ENCONTRARNOS STYLES */
