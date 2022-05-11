@@ -55,7 +55,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Adieu';
+  font-family: 'Gotham';
+  font-size: 1.2em;
+  /* line-height: 1.2; */
 }
 a {
   cursor: pointer;
@@ -72,7 +74,7 @@ header {
   width: 100%;
   height: 4rem;
   z-index: 999;
-  padding: 0 5rem;
+  padding: 0 10%;
   font-family: 'Monument Extended';
   color: white;
 }
@@ -80,8 +82,8 @@ header h1 {
   font-size: 3rem;
 }
 .nav-icons {
-  font-size: 1.5rem;
-  margin-left: 1em;
+  font-size: 2rem;
+  margin-left: 2rem;
 }
 nav {
   flex-grow: 1;
@@ -96,22 +98,29 @@ nav ul {
   text-align: center;
 }
 
+/* SECTIONS */
 .section {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
-  height: calc(100vh - 4rem);
+  height: 100vh;
+  padding-top: 4rem;
   overflow: hidden;
 }
 
 /* HERO STYLES */
 .section-hero {
   position: relative;
+  margin-top: 0;
   background-image: url("../images/hero-background.png");
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 .gradient {
-  margin-top: 4rem;
+  position: absolute;
+  top: 4rem;
 }
 .hero-overlay {
   position: absolute;
@@ -119,13 +128,14 @@ nav ul {
   justify-content: center;
   width: 100%;
   top: 4rem;
-  overflow: hidden;
+  /* overflow: hidden; */
+  font-family: 'Adieu';
 }
 .hero-logo {
-  width: 25rem;
+  width: 30rem;
   position: absolute;
-  left: -12.5rem;
-  top: calc(50vh - 14.5rem); /* half image height - margin */
+  left: -12rem;
+  top: calc(50vh - 19rem); /* half image height - margin */
 }
 .circular-text img {
   position: absolute;
@@ -134,17 +144,17 @@ nav ul {
   width: 150px;
 }
 .hero-text {
-  margin-top: calc(50vh - 14.5rem); /* half image height - margin */
-  margin-left: 14.5rem;
+  margin-top: calc(50vh - 19rem); /* half image height - margin */
+  margin-left: 20rem;
 }
 .hero-text-slide {
   text-transform: uppercase;
   font-weight: 900;
-  line-height: .9;
-  margin-bottom: .7rem;
+  margin-bottom: 1rem;
+  line-height: .85;
 }
 .hero-text-slide .first-line {
-  font-size: 5rem;
+  font-size: 7rem;
   /* outline with text-shadow */
   color: white;
   text-shadow:
@@ -157,21 +167,23 @@ nav ul {
 @supports((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
   .hero-text-slide .first-line {
     color: transparent;
-    -webkit-text-stroke: 1px black;
-    text-stroke: 1px black;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
     text-shadow: none;
   }
 }
 .hero-text-slide .second-line {
-  font-size: 6.5rem;
+  font-size: 8.5rem;
 }
 
 .hero-text h2 {
-  font-size: 1.7rem;
-  margin-bottom: .7rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: .5rem;
 }
 .hero-text-body {
   /* padding-top: 1rem; */
+  padding-left: .5rem;
   line-height: 1.5;
 }
 .hero-buttons {
@@ -181,8 +193,8 @@ nav ul {
   background-color: white;
   border-radius: 25px;
   margin: 3rem 1rem;
-  padding: .8rem 2rem;
-  font-size: .8rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -192,10 +204,12 @@ nav ul {
   justify-content: center;
 }
 .carrousel-selector {
+  position: relative;
+  bottom: -4rem;
   border: 1px solid black;
   border-radius: 50%;
-  width: .7rem;
-  height: .7rem;
+  width: 1rem;
+  height: 1rem;
   margin: 0 .5rem;
 }
 .carrousel-selector.selected {
@@ -204,9 +218,9 @@ nav ul {
 
 /* MERCADO STYLES */
 .section-mercado {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   text-align: center;
   overflow: hidden;
 }
@@ -311,11 +325,14 @@ nav ul {
 
 /* CÓMO COMPRAR STYLES */
 .section-comprar {
-  display: flex;
+  /* display: flex; */
+  /* border: 1px solid red; */
+  flex-direction: row;
 }
 .panel {
   /* border: 1px solid green; */
   width: 50%;
+  height: 100%;
 }
 .section-comprar .panel-left {
   position: relative;
@@ -338,7 +355,7 @@ nav ul {
   flex-direction: column;
   position: relative;
   align-items: center;
-  padding-top: 3rem;
+  padding-top: 4rem;
   color: white;
 }
 .panel-content h2 {
@@ -376,7 +393,7 @@ nav ul {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 0 5rem;
+  padding: 4rem 5rem;
 }
 .panel-right-step {
   font-family: 'Monument Extended';
@@ -392,9 +409,6 @@ nav ul {
 
 /* DONDE ENCONTRARNOS STYLES */
 .section-encontrar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-transform: uppercase;
   padding: 3rem;
   padding-top: 7rem;
@@ -426,10 +440,6 @@ nav ul {
 
 /* PREGUNTAS FRECUENTES STYLES */
 .section-preguntas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: var(--clr-mid);
   height: 100vh;
 }
@@ -440,7 +450,6 @@ nav ul {
   font-size: 2rem;
 }
 .section-preguntas-text {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -486,10 +495,6 @@ nav ul {
 
 /* CONTACTO STYLES */
 .section-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: 'Gotham';
   text-align: center;
   line-height: 1.5;
