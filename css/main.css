@@ -415,15 +415,15 @@ nav ul {
 /* DONDE ENCONTRARNOS STYLES */
 .section-encontrar {
   text-transform: uppercase;
-  padding: 3rem;
-  padding-top: 7rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .encontrar-subtitle {
-  font-size: .7rem;
+  font-family: 'Gotham';
+  font-size: 1rem;
 }
 .section-encontrar h2 {
-  font-size: 2rem;
+  font-family: 'Adieu';
+  font-size: 3rem;
   font-weight: bold;
   padding-top: .5rem;
 }
@@ -432,15 +432,15 @@ nav ul {
 }
 .encontrar-buttons .button {
   border: 1px solid black;
-  font-size: .7rem;
+  border-radius: 40px;
+  display: inline-flex;
+  max-width: 230px;
   text-align: center;
-  justify-content: center;
   align-items: center;
-  margin: 2rem 1rem;
 }
 .encontrar-mapa {
-  width: 650px;
-  height: 350px;
+  width: 70%;
+  height: 50%;
 }
 
 /* PREGUNTAS FRECUENTES STYLES */
