@@ -100,14 +100,12 @@ nav ul {
 
 /* SECTIONS */
 .section {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  /* padding-top: 4rem; */
   overflow: hidden;
 }
 
@@ -234,7 +232,7 @@ nav ul {
   transform: rotate(45deg);
 }
 .mercado-promo .first-line {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .mercado-promo .second-line {
@@ -393,17 +391,17 @@ nav ul {
   align-items: center;
   text-align: center;
   color: white;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 .panel-right-step {
   font-family: 'Monument Extended';
-  font-size: 6rem;
+  font-size: 5rem;
   padding-top: 2rem;
 }
 .panel-right-subtitle {
-  font-size: 1.5rem;
-  padding-top: 1rem;
+  font-size: 1.3rem;
+  padding-top: .7rem;
 }
 .panel-right-description {
   color: black;
@@ -584,4 +582,9 @@ footer .panel-right {
 }
 footer .panel-right {
   border-left: 1px solid white;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px){
+
 }
