@@ -52,11 +52,13 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Gotham';
-  font-size: 1.2em;
   /* line-height: 1.2; */
 }
 a {
@@ -118,6 +120,8 @@ nav ul {
 }
 .gradient {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 4rem;
 }
 .hero-overlay {
@@ -301,7 +305,7 @@ nav ul {
   height: 100%;
   align-items: center;
   text-align: center;
-  justify-content: center
+  justify-content: center;
   padding: .5rem;
 }
 .info-card-icon {
@@ -309,7 +313,6 @@ nav ul {
   margin-top: .5rem;
 }
 .info-card-title {
-  /* font-size: .7rem; */
   font-weight: bold;
   line-height: 2;
 }
@@ -585,6 +588,130 @@ footer .panel-right {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px){
 
+/* TABLET LANDSCAPE DOWN */
+@media screen and (max-width: 1200px){
+  html {
+    font-size: 14px;
+  }
+  .hero-logo {
+    width: 25rem;
+    left: -10rem;
+    top: calc(50vh - 16.5rem);
+  }
+  .section-preguntas {
+    justify-content: flex-start;
+    padding-top: 3rem;
+  }
+}
+
+/* TABLET PORTRAIT DOWN */
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+  .button {
+    font-size: 1.2rem;
+  }
+  /* HERO */
+  .hero-logo {
+    display: none;
+  }
+  .hero-text {
+    margin-left: 0;
+    padding: 0 2rem;
+  }
+  .hero-text-body {
+    font-size: 1.5rem;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  /* MERCADO */
+  .section-mercado {
+    height: auto;
+  }
+  .mercado-promo {
+    left: 30%;
+    top: 6rem;
+    padding: .5rem 15rem;
+  }
+  .mercado-text {
+    padding: 1rem 3rem;
+    width: auto;
+  }
+  .mercado-text p {
+    font-size: 1.2rem;
+  }
+  .info-cards {
+    flex-direction: column;
+    margin: 2rem;
+  }
+  .info-card {
+    margin: 1rem;
+    width: 350px;
+    height: 310px;
+  }
+  .info-card-icon {
+    height: 9rem;
+  }
+  .info-card-title {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  /* COMPRAR */
+  .section-comprar {
+    height: auto;
+    flex-direction: column;
+  }
+  .section-comprar .panel {
+    width: 100%;
+  }
+  .panel-content-text {
+    font-size: 1.5rem;
+  }
+  .comprar-logo {
+    width: 50%;
+  }
+  .section-comprar .panel-right {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  /* DÓNDE ENCONTRARNOS */
+  .section-encontrar {
+    height: auto;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  .section-encontrar h2 {
+    font-size: 2rem;
+  }
+  .encontrar-mapa {
+    height: 500px;
+  }
+ /* PREGUNTAS FRECUENTES */
+ .section-preguntas {
+   height: auto;
+   justify-content: flex-start;
+   padding-top: 4rem;
+   padding-bottom: 3rem;
+ }
+ /* CONTACTO */
+ .section-contacto {
+   height: auto;
+   justify-content: flex-start;
+   padding-top: 4rem;
+   padding-bottom: 3rem;
+ }
+ /* FOOTER */
+ footer {
+   padding: 2rem;
+ }
+ .footer-panel {
+   padding: 0;
+ }
+ .footer-logo {
+   width: 250px;
+ }
 }
