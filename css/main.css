@@ -107,7 +107,7 @@ nav ul {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 }
 
@@ -117,6 +117,7 @@ nav ul {
   margin-top: 0;
   background-image: url("../images/hero-background.png");
   overflow: hidden;
+  height: 100vh;
 }
 .gradient {
   position: absolute;
@@ -328,6 +329,7 @@ nav ul {
 /* CÓMO COMPRAR STYLES */
 .section-comprar {
   flex-direction: row;
+  height: 100vh;
 }
 .panel {
   width: 50%;
@@ -384,7 +386,7 @@ nav ul {
 }
 .comprar-logo {
   margin: 4rem;
-  width: 60%;
+  width: 50%;
 }
 .section-comprar .panel-right {
   background: var(--gradient-clr-3);
@@ -394,8 +396,7 @@ nav ul {
   align-items: center;
   text-align: center;
   color: white;
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding: 3rem 7rem;
 }
 .panel-right-step {
   font-family: 'Monument Extended';
@@ -416,7 +417,7 @@ nav ul {
 /* DONDE ENCONTRARNOS STYLES */
 .section-encontrar {
   text-transform: uppercase;
-  /* height: 100vh; */
+  height: 100vh;
 }
 .encontrar-subtitle {
   font-family: 'Gotham';
@@ -588,6 +589,14 @@ footer .panel-right {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+  .section-comprar .panel-right {
+    padding: 1rem 7rem;
+  }
+}
 
 /* TABLET LANDSCAPE DOWN */
 @media screen and (max-width: 1200px){
@@ -669,9 +678,6 @@ footer .panel-right {
   }
   .panel-content-text {
     font-size: 1.5rem;
-  }
-  .comprar-logo {
-    width: 50%;
   }
   .section-comprar .panel-right {
     padding-top: 2rem;
