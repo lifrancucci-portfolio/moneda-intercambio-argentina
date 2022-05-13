@@ -367,7 +367,9 @@ nav ul {
   font-weight: 900;
 }
 .panel-content h2 p:first-child {
+  width: 200px;
   font-size: 1.5rem;
+  text-align: right;
   padding-top: 1.7rem;
   padding-right: .7rem;
 }
@@ -633,6 +635,9 @@ footer .panel-right {
   .comprar-logo {
     width: 45%;
   }
+  .panel-content h2 p:first-child {
+    width: 270px;
+  }
   /* DÓNDE ENCONTRARNOS */
   .encontrar-buttons .button {
     max-width: 350px;
@@ -798,18 +803,25 @@ footer .panel-right {
 }
 /* ------------- MOBILE DEVICES DOWN ------------- */
 @media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
   /* body {
     max-width: 100vw;
     overflow-x: hidden;
   } */
-  header {
-    width: 100vw;
-    padding: 0 1rem;
-  }
   .button {
     font-size: 1rem;
     margin: 1rem;
     padding: 1rem;
+  }
+  /* HEADER */
+  header {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+  .nav-icons {
+    margin-left: 1rem;
   }
   /* HERO */
   .circular-text img {
@@ -823,10 +835,25 @@ footer .panel-right {
     align-items: center;
     text-align: center;
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 3rem;
+  }
+  .hero-text-slide {
+    display: flex;
+  }
+  .hero-text-slide .first-line {
+    font-size: 6rem;
+  }
+  .hero-text-slide .second-line {
+    font-size: 6rem;
+  }
+  .hero-text h2 {
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
   }
   .hero-text-body {
-    margin-top: 1.5rem;
+    margin: 2rem;
+    padding: 0;
+    font-size: 1rem;
   }
   .hero-buttons {
     flex-direction: column;
@@ -857,32 +884,51 @@ footer .panel-right {
   .mercado-text h2 {
     font-size: 3rem;
   }
+  .mercado-text p {
+    font-size: 1rem;
+  }
+  .info-card {
+    width: 280px;
+    height: 280px;
+  }
+  .info-card-icon {
+    height: 150px;
+  }
+  .info-card-inner {
+    justify-content: flex-start;
+  }
   /* CÓMO COMPRAR CON MIA */
   .section-comprar {
-    height: 200vh;
+    /* height: 200vh; */
   }
   .panel-content h2 {
     flex-direction: column;
     text-align: center;
   }
   .panel-content h2 p:first-child {
-    font-size: 2rem;
+    width: auto;
+    text-align: center;
+    font-size: 1.5rem;
   }
   .panel-content h2 p:last-child {
-    font-size: 9rem;
+    font-size: 8rem;
   }
   .panel-content-text {
     text-align: center;
   }
   .comprar-logo {
-    width: 80%;
+    width: 70%;
   }
   .section-comprar .panel-right {
-    padding: 6rem 2rem;
+    padding: 1rem;
+    padding-bottom: 4rem;
   }
   /* DÓNDE ENCONTRARNOS */
   .section-encontrar {
     text-align: center;
+  }
+  .section-encontrar h2 {
+    font-size: 1.5rem;
   }
   .encontrar-buttons {
     margin: 2rem;
