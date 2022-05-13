@@ -101,7 +101,7 @@ nav ul {
 }
 .button {
   background-color: white;
-  border-radius: 25px;
+  border-radius: 45px;
   margin: 3rem 1rem;
   padding: 1rem 3rem;
   font-size: 1rem;
@@ -472,15 +472,10 @@ nav ul {
   text-transform: uppercase;
   margin: 2rem;
 }
-/* .section-preguntas-text p {
-  font-family: 'Gotham';
-} */
 .section-preguntas-accordion {
-  /* border: 1px solid red; */
   width: 60%;
 }
 .accordion-question {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -549,7 +544,6 @@ footer {
   color: white;
   padding: 2rem 10vw;
   font-family: 'Gotham';
-  /* font-weight: lighter; */
 }
 .footer-panel {
   display: flex;
@@ -588,6 +582,87 @@ footer .panel-right {
 }
 
 /* **************** MEDIA QUERIES **************** */
+
+/* ------------- BIG MONITOR UP ------------- */
+@media screen and (min-width: 1800px) {
+  html {
+    font-size: 1.5rem;
+  }
+  /* HERO */
+  .hero-logo {
+    width: 27rem;
+    left: -10rem;
+    top: calc(50vh - 15rem);
+  }
+  .circular-text img {
+    width: 200px;
+    left: calc(100% - 200px - 6rem);
+  }
+  .hero-text {
+    margin-top: calc(50vh - 15rem);
+  }
+  .hero-buttons .button {
+    margin: 2rem;
+  }
+  .carrousel-selector {
+    bottom: -2rem;
+  }
+  /* MIA MERCADO */
+  .section-mercado {
+    height: 100vh;
+  }
+  .logo-mm {
+    margin-top: -3rem;
+    width: 230px;
+  }
+  .mercado-text {
+    width: 750px;
+  }
+  .info-card {
+    width: 380px;
+    height: 320px;
+  }
+  .info-card-background {
+    padding: 1.5rem;
+  }
+  .info-card-icon {
+    margin-top: 0;
+    height: 120px;
+  }
+  /* CÓMO COMPRAR CON MIA */
+  .comprar-logo {
+    width: 45%;
+  }
+  /* DÓNDE ENCONTRARNOS */
+  .encontrar-buttons .button {
+    max-width: 350px;
+    padding: .5rem 2rem;
+  }
+  /* CONTACTO */
+  .section-contacto h2 {
+    font-size: 2.5rem;
+  }
+  .line-contacto {
+    margin: 1rem;
+  }
+  .section-contacto-text {
+    width: 700px;
+  }
+  .contact-phone,
+  .contact-mail {
+    font-size: 1.2rem;
+  }
+  /* FOOTER */
+  .footer-panel .panel-title {
+    font-size: 1rem;
+  }
+  .footer-panel p {
+    font-size: .7rem;
+  }
+  .footer-logo {
+    width: 400px;
+  }
+}
 
 /* ------------- MEDIUM MONITOR DOWN ------------- */
 @media screen and (max-width: 1400px) {
@@ -765,6 +840,7 @@ footer .panel-right {
   }
   /* MIA MERCADO */
   .mercado-promo {
+    /* display: none; */
     top: 4rem;
     left: 25%;
     padding: .5rem 3rem;
