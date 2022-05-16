@@ -61,6 +61,12 @@ body {
   font-family: 'Gotham';
   /* line-height: 1.2; */
 }
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 a {
   cursor: pointer;
 }
