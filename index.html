@@ -11,40 +11,64 @@
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/3119857d19.js" crossorigin="anonymous"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js" charset="utf-8">
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        contentLoaded();
+      });
+    </script>
+
   </head>
 
   <body>
     <!-- HEADER -->
-    <header>
+    <header id="header">
 
       <h1>MIA</h1>
 
       <nav>
-        <i class="nav-icons fa-solid fa-bars"></i>
-        <i class="nav-icons fa-solid fa-cart-shopping"></i>
-        <ul>
-          <li>
-            <a href="#">MIA MERCADO</a>
-          </li>
-          <li>
-            <a href="#">CÓMO COMPRAR</a>
-          </li>
-          <li>
-            <a href="#">DÓNDE ENCONTRARNOS</a>
-          </li>
-          <li>
-            <a href="#">PREGUNTAS FRECUENTES</a>
-          </li>
-          <li>
-            <a href="#">CONTACTO</a>
-          </li>
-        </ul>
-      </nav>
 
+        <i id="hamburguer-menu" class="nav-icon fa-solid fa-bars"></i>
+        <i class="nav-icon fa-solid fa-cart-shopping"></i>
+
+        <div id="nav-menu" class="nav-menu">
+
+          <img class="menu-logo" src="images/logo-blue.png" alt="Logo MIA">
+
+          <ul class="nav-ul" id="nav-ul">
+            <p class="menu-title">Menú</p>
+            <div class="line-menu"></div>
+            <li>
+              <a class="menu-link" href="#section-mercado">MIA Mercado</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#section-comprar">Cómo comprar</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#section-encontrar">Dónde encontrarnos</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#section-preguntas">Preguntas fecuentes</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#">Contacto</a>
+            </li>
+
+            <i class="menu-icon fa-brands fa-instagram"></i>
+
+            <div id="close-menu-button" class="button close-menu-button">
+              <p>Cerrar</p>
+            </div>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- HERO -->
-    <div class="section section-hero">
+    <div id="section-hero" class="section section-hero">
 
       <img class="gradient" src="images/hero-gradient.png">
 
@@ -92,7 +116,7 @@
     </div>
 
     <!-- MIA MERCADO -->
-    <div class="section section-mercado">
+    <div id="section-mercado" class="section section-mercado">
       <div class="mercado-promo">
         <p class="first-line">5% descuento</p>
         <p class="second-line">en todos los productos</p>
@@ -151,7 +175,7 @@
     </div>
 
     <!-- CÓMO COMPRAR -->
-    <div class="section section-comprar">
+    <div id="section-comprar" class="section section-comprar">
 
       <div class="panel panel-left">
         <div class="panel-content">
@@ -186,7 +210,7 @@
     </div>
 
     <!-- DONDE ENCONTRARNOS -->
-    <div class="section section-encontrar">
+    <div id="section-encontrar" class="section section-encontrar">
       <p class="encontrar-subtitle">Puntos de consumo</p>
       <h2>Dónde encontrarnos</h2>
 
@@ -209,7 +233,7 @@
     </div>
 
     <!-- PREGUNTAS FRECUENTES -->
-    <div class="section section-preguntas">
+    <div id="section-preguntas" class="section section-preguntas">
       <div class="section-preguntas-text">
         <i class="preguntas-icon fa-solid fa-comments"></i>
         <h2>Preguntas <br>Frecuentes</h2>

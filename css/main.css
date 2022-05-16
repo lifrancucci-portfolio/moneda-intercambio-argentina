@@ -64,6 +64,27 @@ body {
 a {
   cursor: pointer;
 }
+.button {
+  background-color: white;
+  border-radius: 45px;
+  margin: 3rem 1rem;
+  padding: 1rem 3rem;
+  font-family: 'Gotham';
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /* height: 100vh; */
+  overflow: hidden;
+}
 
 /* HEADER STYLES */
 header {
@@ -80,10 +101,14 @@ header {
   font-family: 'Monument Extended';
   color: white;
 }
+.menu-expanded {
+  background-color: white;
+  color: black;
+}
 header h1 {
   font-size: 3rem;
 }
-.nav-icons {
+.nav-icon {
   font-size: 2rem;
   margin-left: 2rem;
 }
@@ -91,32 +116,52 @@ nav {
   flex-grow: 1;
   text-align: right;
 }
-nav ul {
+.nav-menu {
+  /* border: 1px solid red; */
   display: none;
-  position: absolute;
-  width: 100%;
-  top: 100%;
+  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 4rem;
+  left: 0;
   align-items: center;
+  justify-content: center;
   text-align: center;
-}
-.button {
   background-color: white;
-  border-radius: 45px;
-  margin: 3rem 1rem;
-  padding: 1rem 3rem;
-  font-size: 1rem;
-  font-weight: bold;
+  color: black;
   text-transform: uppercase;
-  text-align: center;
 }
-.section {
+.nav-ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
-  /* height: 100vh; */
-  overflow: hidden;
+}
+.menu-logo {
+  width: 30rem;
+  position: absolute;
+  left: -12rem;
+  top: calc(50vh - 19rem); /* half image height - margin */
+}
+.nav-ul .menu-title {
+  font-size: 1rem;
+}
+.nav-ul .line-menu {
+  border: 1px solid black;
+  width: 3.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.nav-ul li {
+  font-size: 3rem;
+  padding-top: 1rem;
+}
+.nav-ul .menu-icon {
+  font-size: 2.5rem;
+  padding-top: 3rem;
+}
+.nav-ul .close-menu-button {
+  border: 1px solid black;
 }
 
 /* HERO STYLES */
