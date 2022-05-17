@@ -52,8 +52,9 @@ function contentLoaded() {
   const heroTextSlides = document.querySelectorAll('.hero-text-slide');
   const carrouselSelectors = document.querySelectorAll('.carrousel-selector');
 
-  // Cambiar slide cada n milisegundos
   let currentSlide = 0;
+
+  // Cambiar slide cada n milisegundos
   setInterval(function() {selectSlide(currentSlide)}, 2500);
 
   function selectSlide(target) {
@@ -71,11 +72,13 @@ function contentLoaded() {
       carrouselSelectors[target].classList.add('selected');
       currentSlide++;
     } else {
+      // Cuando currentSlide llega al último elemento de heroTextSlides, volver a 0 y llamar recursivamente a la función
       currentSlide = 0;
       selectSlide(currentSlide);
     }
   }
 
+  // Seleccionar el slide mediante click en los selectores
   carrouselSelectors.forEach(carrouselSelector => {
     carrouselSelector.addEventListener('click', function handleClick(event) {
       let e = event.target.classList;
@@ -94,5 +97,20 @@ function contentLoaded() {
       }
     });
   })
+
+  // PREGUNTAS FRECUENTES ACCORDION
+  const questionDisplay = document.getElementsByClassName('question-display');
+
+  for(let i = 0; i < questionDisplay.length; i++) {
+    questionDisplay[i].addEventListener('click', function() {
+      this.classList.toggle('active');
+      let expandText = this.nextElementSibling;
+      if(expandText.style.maxHeight) {
+        expandText.style.maxHeight = null;
+      } else {
+        expandText.style.maxHeight = expandText.scrollHeight + 'px';
+      }
+    });
+  }
 
 }

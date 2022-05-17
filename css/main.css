@@ -509,7 +509,7 @@ nav {
 /* PREGUNTAS FRECUENTES STYLES */
 .section-preguntas {
   background-color: var(--clr-mid);
-  height: 100vh;
+  min-height: 100vh;
 }
 .preguntas-icon {
   border: 1px solid black;
@@ -536,6 +536,7 @@ nav {
 }
 .section-preguntas-accordion {
   width: 60%;
+  margin-bottom: 3rem;
 }
 .accordion-question {
   display: flex;
@@ -547,6 +548,10 @@ nav {
   justify-content: space-between;
   border-top: 1px solid black;
   padding: 1rem .5rem;
+  cursor: default;
+}
+.active, .question-display:hover {
+  background-color: rgba(215,215,222,255);
 }
 .accordion-question:last-child {
   border-bottom: 1px solid black;
@@ -555,8 +560,14 @@ nav {
   text-transform: uppercase;
 }
 .section-preguntas-accordion .expand-text {
-  display: none;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.expand-text p {
+  font-family: 'Gotham';
+  font-weight: normal;
   padding: 2rem .5rem;
 }
 
