@@ -200,12 +200,12 @@ nav {
 }
 .circular-text img {
   position: absolute;
-  left: calc(100% - 150px - 3rem);
-  top: 3rem;
-  width: 150px;
+  left: calc(100% - 130px - 2rem);
+  top: 2rem;
+  width: 130px;
 }
 .hero-text {
-  margin-top: calc(50vh - 19rem); /* half image height - margin */
+  margin-top: calc(50vh - 15rem); /* half image height - margin */
   margin-left: 20rem;
 }
 .hero-text-slide {
@@ -214,8 +214,17 @@ nav {
   margin-bottom: 1rem;
   line-height: .85;
 }
+.slide1 {
+  display: block;
+}
+.slide2 {
+  display: none;
+}
+.slide3 {
+  display: none;
+}
 .hero-text-slide .first-line {
-  font-size: 7rem;
+  font-size: 6rem;
   /* outline with text-shadow */
   color: white;
   text-shadow:
@@ -234,11 +243,10 @@ nav {
   }
 }
 .hero-text-slide .second-line {
-  font-size: 8.5rem;
+  font-size: 7rem;
 }
-
 .hero-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 1rem;
   padding-left: .5rem;
 }
@@ -252,19 +260,21 @@ nav {
 }
 .carrousel-selectors {
   display: flex;
+  position: relative;
+  bottom: -2rem;
   align-items: center;
   justify-content: center;
 }
 .carrousel-selector {
-  position: relative;
-  bottom: -4rem;
+  /* position: relative;
+  bottom: -4rem; */
   border: 1px solid black;
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
   margin: 0 .5rem;
 }
-.carrousel-selector.selected {
+.selected {
   background-color: black;
 }
 
