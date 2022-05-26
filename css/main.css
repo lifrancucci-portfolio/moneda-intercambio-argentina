@@ -9,47 +9,75 @@
 }
 
 /* TYPOGRAPHY */
+/* ADIEU */
 @font-face {
   font-family: 'Adieu';
   src: url(../fonts/adieu-regular.otf);
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 @font-face {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
   src: url(../fonts/adieu-bold.otf);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 @font-face {
-  font-family: 'Adieu';
+  font-family: 'Adieu Slanted';
+  src: url(../fonts/adieu-boldslanted.otf);
+  /* font-weight: boldslanted; */
+}
+@font-face {
+  font-family: 'Adieu Black';
   src: url(../fonts/adieu-black.otf);
-  font-weight: 900;
+}
+/* APERCU */
+@font-face {
+  font-family: 'Apercu Light';
+  src: url(../fonts/apercu.otf);
+  /* font-weight: lighter; */
 }
 @font-face {
-  font-family: 'Gotham';
-  src: url(../fonts/gotham-medium.ttf);
-  font-weight: normal;
+  font-family: 'Apercu';
+  src: url(../fonts/apercu-medium.otf);
+  /* font-weight: normal; */
 }
+/* @font-face {
+  font-family: 'Gotham';
+  src:
+    url(../fonts/gotham-book.otf) format('truetype') font-weight-lighter,
+    url(../fonts/gotham-medium.otf) format('truetype') font-weight-normal,
+    url(../fonts/gotham-bold.otf) format('truetype') font-weight-bold,
+} */
 @font-face {
   font-family: 'Gotham';
+  src: url(../fonts/gotham-medium.otf);
+}
+@font-face {
+  font-family: 'Gotham Bold';
   src: url(../fonts/gotham-bold.otf);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 @font-face {
-  font-family: 'Gotham';
-  src: url(../fonts/gotham-black.otf);
-  font-weight: 900;
+  font-family: 'Gotham Book';
+  src: url(../fonts/gotham-book.otf);
+  /* font-weight: normal; */
 }
+/* MONUMENT */
 @font-face {
-  font-family: 'Monument Extended';
+  font-family: 'Monument';
   src: url(../fonts/monumentextended-regular.otf);
+  /* font-weight: normal; */
+}
+@font-face {
+  font-family: 'Monument Black';
+  src: url(../fonts/monumentextended-ultrabold.otf);
+  /* font-weight: bolder; */
+}
+/* MYRIAD */
+@font-face {
+  font-family: 'Myriad';
+  src: url(../fonts/myriadpro-regular.otf);
   font-weight: normal;
 }
-@font-face {
-  font-family: 'Monument Extended';
-  src: url(../fonts/monumentextended-ultrabold.otf);
-  font-weight: 900;
-}
-
 /* MAIN STYLES */
 *, *::after, *::before {
   box-sizing: border-box;
@@ -108,7 +136,7 @@ header {
   height: 4rem;
   z-index: 999;
   padding: 0 10%;
-  font-family: 'Monument Extended';
+  /* font-family: 'Monument Extended'; */
   color: white;
 }
 .menu-expanded {
@@ -116,6 +144,8 @@ header {
   color: black;
 }
 header h1 {
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
   font-size: 3rem;
 }
 .nav-icon {
@@ -200,7 +230,7 @@ nav {
 .hero-overlay {
   position: absolute;
   width: 100%;
-  font-family: 'Adieu';
+  /* font-family: 'Gotham'; */
 }
 .hero-logo {
   width: 30rem;
@@ -219,25 +249,20 @@ nav {
   margin-left: 20rem;
 }
 .hero-text-slide {
+  font-family: 'Adieu Black';
+  /* font-weight: 900; */
   text-transform: uppercase;
-  font-weight: 900;
   margin-bottom: 1rem;
   line-height: .85;
 }
 .slide1 {
   display: block;
-  /* opacity: 1; */
-  /* transition: opacity 0.4s ease-in-out; */
 }
 .slide2 {
   display: none;
-  /* opacity: 0; */
-  /* transition: opacity 0.4s ease-in-out; */
 }
 .slide3 {
   display: none;
-  /* opacity: 0; */
-  /* transition: opacity 0.4s ease-in-out; */
 }
 .hero-text-slide .first-line {
   font-size: 6rem;
@@ -262,11 +287,15 @@ nav {
   font-size: 7rem;
 }
 .hero-text h2 {
+  font-family: 'Adieu';
+  /* font-weight: normal; */
   font-size: 2.3rem;
   margin-bottom: 1rem;
   padding-left: .5rem;
 }
 .hero-text-body {
+  font-family: 'Gotham';
+  font-weight: 500;
   /* padding-top: 1rem; */
   padding-left: .5rem;
   line-height: 1.5;
@@ -282,8 +311,6 @@ nav {
   justify-content: center;
 }
 .carrousel-selector {
-  /* position: relative;
-  bottom: -4rem; */
   border: 1px solid black;
   border-radius: 50%;
   width: 1rem;
@@ -306,18 +333,20 @@ nav {
   top: 5rem;
   background-color: var(--gradient-clr-1);
   color: white;
-  font-family: 'Adieu';
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.3;
   padding: .5rem 10rem;
   transform: rotate(45deg);
 }
 .mercado-promo .first-line {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'Adieu Black';
+  /* font-weight: 900; */
+  font-size: 1.3rem;
 }
 .mercado-promo .second-line {
-  font-size: 1rem;
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
+  /* font-size: .9rem; */
 }
 .logo-mm {
   margin-top: -2rem;
@@ -328,18 +357,22 @@ nav {
   width: 500px;
   line-height: 1.2;
 }
-.mercado-text p {
+/* .mercado-text p {
   font-family: 'Gotham';
   font-size: 1rem;
   text-transform: uppercase;
-}
+} */
 .mercado-text h2 {
-  text-transform: uppercase;
+  font-family: 'Adieu Bold';
+  /* font-weight: 900; */
   font-size: 3.5rem;
-  font-weight: bold;
+  text-transform: uppercase;
   padding-bottom: 1rem;
 }
 .mercado-text .text-body {
+  font-family: 'Apercu Light';
+  /* font-weight: lighter; */
+  /* font-size: 1.2rem; */
   text-transform: none;
 }
 .info-cards {
@@ -395,7 +428,9 @@ nav {
   margin: 1rem;
 }
 .info-card-link {
-  font-size: .8rem;
+  font-family: 'Apercu Light';
+  /* font-weight: lighter; */
+  /* font-size: 1rem; */
 }
 
 /* CÓMO COMPRAR STYLES */
@@ -433,31 +468,34 @@ nav {
   color: white;
 }
 .panel-content h2 {
+  /* border: 1px solid red; */
   display: flex;
-  font-family: 'Adieu';
+  font-family: 'Adieu Black';
+  /* font-weight: 400; */
+  /* font-weight: 900; */
   text-align: right;
   text-transform: uppercase;
-  font-weight: 900;
 }
 .panel-content h2 p:first-child {
+  /* border: 1px solid yellow; */
   width: 200px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: right;
-  padding-top: 1.7rem;
+  padding-top: 1rem;
   padding-right: .7rem;
 }
 .panel-content h2 p:last-child {
-  font-size: 7rem;
+  font-size: 5rem;
+  padding-right: 7rem;
 }
 .line-comprar {
   border: 1px solid white;
   width: 3rem;
   margin: 1rem;
 }
-.panel-content-text {
+/* .panel-content-text {
   font-family: 'Gotham';
-  font-weight: normal;
-}
+} */
 .comprar-logo {
   margin: 4rem;
   width: 50%;
@@ -473,7 +511,7 @@ nav {
   padding: 3rem 7rem;
 }
 .panel-right-step {
-  font-family: 'Monument Extended';
+  font-family: 'Monument';
   font-size: 5rem;
   padding-top: 2rem;
 }
@@ -483,7 +521,7 @@ nav {
 }
 .panel-right-description {
   color: black;
-  font-family: 'Gotham';
+  font-family: 'Apercu Light';
   font-size: 1rem;
   padding-top: 1rem;
 }
@@ -493,14 +531,14 @@ nav {
   text-transform: uppercase;
   height: 100vh;
 }
-.encontrar-subtitle {
+/* .encontrar-subtitle {
   font-family: 'Gotham';
   font-size: 1rem;
-}
+} */
 .section-encontrar h2 {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
   font-size: 3rem;
-  font-weight: bold;
   padding-top: .5rem;
 }
 .encontrar-buttons {
@@ -544,11 +582,14 @@ nav {
   margin-bottom: 2rem;
 }
 .section-preguntas-text h2 {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
   font-size: 2rem;
-  font-weight: bold;
   text-transform: uppercase;
   margin: 2rem;
+}
+.section-preguntas-text p {
+  font-family: 'Apercu Light';
 }
 .section-preguntas-accordion {
   width: 60%;
@@ -574,6 +615,7 @@ nav {
   border-bottom: 1px solid black;
 }
 .question-display .question {
+  font-family: 'Gotham Bold';
   text-transform: uppercase;
 }
 .section-preguntas-accordion .expand-text {
@@ -583,8 +625,8 @@ nav {
   transition: max-height 0.2s ease-out;
 }
 .expand-text p {
-  font-family: 'Gotham';
-  font-weight: normal;
+  font-family: 'Apercu Light';
+  /* font-weight: normal; */
   padding: 2rem .5rem;
 }
 
@@ -598,9 +640,9 @@ nav {
   background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
 }
 .section-contacto h2 {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
+  /* font-weight: normal; */
   font-size: 3rem;
-  font-weight: bold;
   text-transform: uppercase;
 }
 .line-contacto {
@@ -609,21 +651,22 @@ nav {
   margin: 2rem;
 }
 .section-contacto-subtitle {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 .section-contacto-text {
   width: 500px;
 }
 .contact-type {
+  font-family: 'Apercu Light';
   text-transform: uppercase;
   margin-top: 1.5rem;
 }
 .contact-phone,
 .contact-mail {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -633,7 +676,7 @@ footer {
   background-color: black;
   color: white;
   padding: 2rem 10vw;
-  font-family: 'Gotham';
+  font-family: 'Apercu Light';
 }
 .footer-panel {
   display: flex;
@@ -644,9 +687,9 @@ footer {
   width: 50%;
 }
 .footer-panel .footer-title {
-  font-family: 'Adieu';
+  font-family: 'Adieu Bold';
+  /* font-weight: bold; */
   font-size: 1.2rem;
-  font-weight: bold;
   text-transform: uppercase;
 }
 .footer-panel p {
@@ -655,6 +698,7 @@ footer {
   padding: .5rem 0;
 }
 .footer-subtitle {
+  font-family: 'Adieu Bold';
   text-transform: uppercase;
 }
 footer .panel-right {
