@@ -1,3 +1,22 @@
+// PRELOAD IMAGES
+let images = [];
+function preload() {
+    for (let i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    "images/hero-gradient.png",
+    "images/slide-bg-1.jpg",
+    "images/slide-bg-2.jpg",
+    "images/slide-bg-3.jpg",
+    "images/como-comprar.jpg",
+    "images/billetes-captura.png",
+)
+
 function contentLoaded() {
 
   // MENU
