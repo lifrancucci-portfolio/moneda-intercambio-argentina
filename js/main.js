@@ -141,7 +141,7 @@ function contentLoaded() {
       // Ir a Conocé MIA
       // const btnConoce =
       document.getElementById('btn-conoce').onclick = function() {
-        location.href = "conoce-mia.html";
+        location.href = "pages/conoce-mia.html";
       };
 
       // PREGUNTAS FRECUENTES ACCORDION
