@@ -217,7 +217,7 @@ nav {
 .section-hero {
   position: relative;
   margin-top: 0;
-  /* background-image: url("../images/hero-background.png"); */
+  background-image: url("../images/slide-bg-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -456,10 +456,10 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/hero-background.png");
+  background-image: url("../images/como-comprar-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: bottom;
   filter: brightness(70%);
 }
 .section-comprar .panel-content {
@@ -671,6 +671,51 @@ nav {
 .contact-mail {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+/* CONOCÉ MIA STYLES */
+.section-conoce {
+  background: var(--gradient-clr-3);
+  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
+  padding-bottom: 9rem;
+}
+.section-conoce h1 {
+  font-family: "Adieu Bold";
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 6rem 0 3rem;
+}
+.section-conoce .modal-conoce {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-conoce .panel {
+  width: 50%;
+}
+.modal-conoce .panel-left {
+  background-color: black;
+  color: white;
+}
+.modal-conoce .panel-left p {
+  font-family: 'Apercu Light';
+  font-size: 1.2rem;
+  padding: 2rem 7rem;
+}
+.modal-conoce .panel-right {
+  position: relative;
+}
+.modal-conoce .panel-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/billetes-captura.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* FOOTER STYLES */
