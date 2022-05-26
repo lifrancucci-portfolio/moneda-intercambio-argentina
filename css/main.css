@@ -217,7 +217,7 @@ nav {
 .section-hero {
   position: relative;
   margin-top: 0;
-  background-image: url("../images/hero-background.png");
+  /* background-image: url("../images/hero-background.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;

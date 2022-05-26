@@ -49,6 +49,7 @@ function contentLoaded() {
 
 
   // HERO SECTION CARROUSEL
+  const sectionHero = document.getElementById('section-hero');
   const heroTextSlides = document.querySelectorAll('.hero-text-slide');
   const carrouselSelectors = document.querySelectorAll('.carrousel-selector');
 
@@ -61,11 +62,9 @@ function contentLoaded() {
     // Cambiar a la slide n mediante los selectores
     if(currentSlide < heroTextSlides.length) {
       heroTextSlides.forEach(slide => {
-        // slide.style.opacity = 0;
         slide.style.display = 'none';
       })
       heroTextSlides[target].style.display = 'block';
-      // heroTextSlides[target].style.opacity = 1;
 
       // Indicar qué selector está seleccionado
       carrouselSelectors.forEach(selector => {
@@ -77,6 +76,19 @@ function contentLoaded() {
       // Cuando currentSlide llega al último elemento de heroTextSlides, volver a 0 y llamar recursivamente a la función
       currentSlide = 0;
       selectSlide(currentSlide);
+    }
+
+    // Cambiar el fondo del slide
+    switch(currentSlide) {
+      case 1:
+        sectionHero.style.backgroundImage="url(images/slide-bg-1.jpg)";
+        break;
+      case 2:
+        sectionHero.style.backgroundImage="url(images/slide-bg-2.jpg)";
+        break;
+      case 3:
+        sectionHero.style.backgroundImage="url(images/slide-bg-3.jpg)";
+        break;
     }
   }
 
