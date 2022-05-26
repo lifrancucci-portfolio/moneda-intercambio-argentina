@@ -1137,6 +1137,18 @@ footer .panel-right {
   .section-contacto-text {
     width: auto;
   }
+  /* CONOCE MIA */
+  .modal-conoce {
+    flex-direction: column;
+  }
+  .modal-conoce .panel {
+    width: 100%;
+    padding-top: 0;
+  }
+  .modal-conoce .panel-left p {
+    padding: 1rem;
+    font-size: 1rem;
+  }
   /* FOOTER */
   footer {
     flex-direction: column;
