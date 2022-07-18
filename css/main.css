@@ -83,7 +83,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 16px; 
+  font-size: 16px;
 }
 body {
   margin: 0;
@@ -323,6 +323,77 @@ nav {
 }
 .selected {
   background-color: black;
+}
+
+/* MODAL: CONOCÉ MIA STYLES */
+.modal-conoce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  background: var(--gradient-clr-3);
+  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+}
+.modal-conoce.active {
+  transform: translateX(0%);
+}
+.modal-conoce .close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  text-align: center;
+}
+.modal-conoce .close-modal i {
+  font-size: 3rem;
+  color: var(--clr-dark);
+}
+.modal-conoce .modal-title {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+}
+.modal-title h1 {
+  font-family: "Adieu Bold";
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+.modal-conoce .conoce-panels {
+  display: flex;
+  position: relative;
+}
+.conoce-panels .panel {
+  /* border: 1px solid red; */
+  width: 50%;
+  min-height: calc(100vh - 130px);
+}
+.conoce-panels .panel-left {
+  background-color: black;
+  color: white;
+  padding-top: 3rem;
+}
+.conoce-panels .panel-left p {
+  font-family: 'Apercu Light';
+  font-size: 1.2rem;
+  padding: 2rem 7rem;
+}
+.conoce-panels .panel-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #ffffff;
+  padding-top: 0;
+}
+.conoce-panels .panel-right img {
+  width: 90%;
 }
 
 /* MERCADO STYLES */
@@ -671,50 +742,6 @@ nav {
 .contact-mail {
   font-size: 1.2rem;
   font-weight: bold;
-}
-
-/* CONOCÉ MIA STYLES */
-.section-conoce {
-  background: var(--gradient-clr-3);
-  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
-  width: 100vw;
-  height: 100vh;
-}
-.section-conoce h1 {
-  font-family: "Adieu Bold";
-  font-size: 3rem;
-  text-transform: uppercase;
-  padding: 4rem;
-}
-.section-conoce .modal-conoce {
-  display: flex;
-}
-.modal-conoce .panel {
-  width: 50%;
-}
-.modal-conoce .panel-left {
-  background-color: black;
-  color: white;
-}
-.modal-conoce .panel-left p {
-  font-family: 'Apercu Light';
-  font-size: 1.2rem;
-  padding: 2rem 7rem;
-}
-.modal-conoce .panel-right {
-  position: relative;
-}
-.modal-conoce .panel-right::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/billetes-captura.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 /* FOOTER STYLES */

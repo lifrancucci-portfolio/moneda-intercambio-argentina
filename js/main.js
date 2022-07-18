@@ -139,10 +139,14 @@ function contentLoaded() {
       })
 
       // Ir a Conocé MIA
-      // const btnConoce =
-      // document.getElementById('btn-conoce').onclick = function() {
-      //   location.href = "pages/conoce-mia.html";
-      // };
+      const modalConoce = document.getElementById('modal-conoce');
+      const btnConoce =
+      document.getElementById('btn-conoce').onclick = function() {
+        modalConoce.classList.add('active');
+      };
+      const closeModal = document.getElementById('close-modal').onclick = function() {
+        modalConoce.classList.remove('active');
+      }
 
       // PREGUNTAS FRECUENTES ACCORDION
       const questionDisplay = document.querySelectorAll('.question-display');
