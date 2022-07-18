@@ -83,7 +83,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 16px;
+  font-size: 16px; 
 }
 body {
   margin: 0;
@@ -677,18 +677,17 @@ nav {
 .section-conoce {
   background: var(--gradient-clr-3);
   background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
-  padding-bottom: 9rem;
+  width: 100vw;
+  height: 100vh;
 }
 .section-conoce h1 {
   font-family: "Adieu Bold";
   font-size: 3rem;
   text-transform: uppercase;
-  padding: 6rem 0 3rem;
+  padding: 4rem;
 }
 .section-conoce .modal-conoce {
   display: flex;
-  width: 100vw;
-  height: 100vh;
 }
 .modal-conoce .panel {
   width: 50%;
