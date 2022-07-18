@@ -132,15 +132,46 @@ function contentLoaded() {
     });
   })
 
-  // Ir a Conocé MIA
+  // MODAL CONOCÉ MIA
   const modalConoce = document.getElementById('modal-conoce');
   const btnConoce =
   document.getElementById('btn-conoce').onclick = function() {
     modalConoce.classList.add('active');
   };
-  const closeModal = document.getElementById('close-modal').onclick = function() {
+  const closeConoce = document.getElementById('close-conoce').onclick = function() {
     modalConoce.classList.remove('active');
   }
+
+  // MODAL SERVICIOS
+  const modalServicios = document.getElementById('modal-servicios');
+  const btnServicios =
+  document.getElementById('btn-servicios').onclick = function() {
+    modalServicios.classList.add('active');
+  };
+  const closeServicios = document.getElementById('close-modal').onclick = function() {
+    modalServicios.classList.remove('active');
+  }
+
+  // MODAL SERVICIOS ACCORDION
+  const serviceDisplay = document.querySelectorAll('.service-display');
+
+  serviceDisplay.forEach(service => {
+    service.addEventListener('click', function() {
+      this.classList.toggle('active');
+
+      let expandText = this.nextElementSibling;
+      let expandSign = this.children.item(1);
+
+      if(expandText.style.maxHeight) {
+        expandSign.innerHTML = "+";
+        expandText.style.maxHeight = null;
+      } else {
+        expandSign.innerHTML = "-";
+        expandText.style.maxHeight = expandText.scrollHeight + 'px';
+      }
+    })
+  })
+
 
   // PREGUNTAS FRECUENTES ACCORDION
   const questionDisplay = document.querySelectorAll('.question-display');
@@ -148,10 +179,15 @@ function contentLoaded() {
   questionDisplay.forEach(question => {
     question.addEventListener('click', function() {
       this.classList.toggle('active');
+
       let expandText = this.nextElementSibling;
+      let expandSign = this.children.item(1);
+
       if(expandText.style.maxHeight) {
+        expandSign.innerHTML = "+";
         expandText.style.maxHeight = null;
       } else {
+        expandSign.innerHTML = "-";
         expandText.style.maxHeight = expandText.scrollHeight + 'px';
       }
     })

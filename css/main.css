@@ -355,13 +355,13 @@ nav {
 .modal-conoce.active {
   transform: translateX(0%);
 }
-.modal-conoce .close-modal {
+.modal-conoce .close-conoce {
   position: absolute;
   top: 1rem;
   right: 3rem;
   text-align: center;
 }
-.modal-conoce .close-modal i {
+.modal-conoce .close-conoce i {
   font-size: 3rem;
   color: var(--clr-dark);
 }
@@ -617,27 +617,28 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   background: var(--gradient-clr-3);
   background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   top: 0;
   left: 0;
-  /* transform: translateX(200%); */
+  transform: translateX(200%);
   transition: transform 0.3s ease-out;
   z-index: 1000;
 }
 .modal-servicios.active {
   transform: translateX(0%);
 }
-.modal-servicios .close-modal {
+.modal-servicios .close-servicios {
   position: absolute;
   top: 1rem;
   right: 3rem;
   text-align: center;
 }
-.modal-servicios .close-modal i {
+.modal-servicios .close-servicios i {
   font-size: 3rem;
   color: var(--clr-dark);
 }
@@ -709,7 +710,7 @@ nav {
   font-family: 'Gotham Bold';
   text-transform: uppercase;
 }
-.section-preguntas-accordion .expand-text {
+.servicios-list-accordion .expand-text {
   /* border-top: 1px solid black; */
   max-height: 0px;
   overflow: hidden;
