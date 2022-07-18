@@ -66,108 +66,95 @@ function contentLoaded() {
     menuLink.addEventListener('click', closeMenu);
   });
 
-  // Funciones específicas de cada página
-  let page = document.body.id;
+  // HERO SECTION CARROUSEL
+  const sectionHero = document.getElementById('section-hero');
+  const heroTextSlides = document.querySelectorAll('.hero-text-slide');
+  const carrouselSelectors = document.querySelectorAll('.carrousel-selector');
 
-  switch(page) {
-    // Para index.html
-    case 'index':
-      // HERO SECTION CARROUSEL
-      const sectionHero = document.getElementById('section-hero');
-      const heroTextSlides = document.querySelectorAll('.hero-text-slide');
-      const carrouselSelectors = document.querySelectorAll('.carrousel-selector');
+  let currentSlide = 0;
 
-      let currentSlide = 0;
+  // Cambiar slide cada n milisegundos
+  let slidesTimer = setInterval(function() {selectSlide(currentSlide)}, 2500);
 
-      // Cambiar slide cada n milisegundos
-      let slidesTimer = setInterval(function() {selectSlide(currentSlide)}, 2500);
-
-      function selectSlide(target) {
-        // Cambiar a la slide n mediante los selectores
-        if(currentSlide < heroTextSlides.length) {
-          heroTextSlides.forEach(slide => {
-            slide.style.display = 'none';
-          })
-          heroTextSlides[target].style.display = 'block';
-
-          // Indicar qué selector está seleccionado
-          carrouselSelectors.forEach(selector => {
-            selector.classList.remove('selected');
-          })
-          carrouselSelectors[target].classList.add('selected');
-          currentSlide++;
-        } else {
-          // Cuando currentSlide llega al último elemento de heroTextSlides, volver a 0 y llamar recursivamente a la función
-          currentSlide = 0;
-          selectSlide(currentSlide);
-        }
-
-        // Cambiar el fondo del slide
-        switch(currentSlide) {
-          case 1:
-            sectionHero.style.backgroundImage="url(images/slide-bg-1.jpg)";
-            break;
-          case 2:
-            sectionHero.style.backgroundImage="url(images/slide-bg-2.jpg)";
-            break;
-          case 3:
-            sectionHero.style.backgroundImage="url(images/slide-bg-3.jpg)";
-            break;
-        }
-      }
-
-      // Seleccionar el slide mediante click en los selectores
-      carrouselSelectors.forEach(carrouselSelector => {
-        carrouselSelector.addEventListener('click', function handleClick(event) {
-          let e = event.target.classList;
-          if(e.contains('selector1')) {
-            currentSlide = 0;
-          }
-          if(e.contains('selector2')) {
-            currentSlide = 1;
-          }
-          if(e.contains('selector3')) {
-            currentSlide = 2;
-          }
-          // Seleccionar el slide elegido
-          selectSlide(currentSlide);
-
-          // Resetear slidesTimer
-          window.clearInterval(slidesTimer);
-          slidesTimer = window.setInterval(function() {selectSlide(currentSlide)}, 2500);
-        });
+  function selectSlide(target) {
+    // Cambiar a la slide n mediante los selectores
+    if(currentSlide < heroTextSlides.length) {
+      heroTextSlides.forEach(slide => {
+        slide.style.display = 'none';
       })
+      heroTextSlides[target].style.display = 'block';
 
-      // Ir a Conocé MIA
-      const modalConoce = document.getElementById('modal-conoce');
-      const btnConoce =
-      document.getElementById('btn-conoce').onclick = function() {
-        modalConoce.classList.add('active');
-      };
-      const closeModal = document.getElementById('close-modal').onclick = function() {
-        modalConoce.classList.remove('active');
-      }
-
-      // PREGUNTAS FRECUENTES ACCORDION
-      const questionDisplay = document.querySelectorAll('.question-display');
-
-      questionDisplay.forEach(question => {
-        question.addEventListener('click', function() {
-          this.classList.toggle('active');
-          let expandText = this.nextElementSibling;
-          if(expandText.style.maxHeight) {
-            expandText.style.maxHeight = null;
-          } else {
-            expandText.style.maxHeight = expandText.scrollHeight + 'px';
-          }
-        })
+      // Indicar qué selector está seleccionado
+      carrouselSelectors.forEach(selector => {
+        selector.classList.remove('selected');
       })
-    break;
+      carrouselSelectors[target].classList.add('selected');
+      currentSlide++;
+    } else {
+      // Cuando currentSlide llega al último elemento de heroTextSlides, volver a 0 y llamar recursivamente a la función
+      currentSlide = 0;
+      selectSlide(currentSlide);
+    }
 
-    // Para conoce-mia.html
-    case 'conoce-mia':
-
-    break;
+    // Cambiar el fondo del slide
+    switch(currentSlide) {
+      case 1:
+        sectionHero.style.backgroundImage="url(images/slide-bg-1.jpg)";
+        break;
+      case 2:
+        sectionHero.style.backgroundImage="url(images/slide-bg-2.jpg)";
+        break;
+      case 3:
+        sectionHero.style.backgroundImage="url(images/slide-bg-3.jpg)";
+        break;
+    }
   }
+
+  // Seleccionar el slide mediante click en los selectores
+  carrouselSelectors.forEach(carrouselSelector => {
+    carrouselSelector.addEventListener('click', function handleClick(event) {
+      let e = event.target.classList;
+      if(e.contains('selector1')) {
+        currentSlide = 0;
+      }
+      if(e.contains('selector2')) {
+        currentSlide = 1;
+      }
+      if(e.contains('selector3')) {
+        currentSlide = 2;
+      }
+      // Seleccionar el slide elegido
+      selectSlide(currentSlide);
+
+      // Resetear slidesTimer
+      window.clearInterval(slidesTimer);
+      slidesTimer = window.setInterval(function() {selectSlide(currentSlide)}, 2500);
+    });
+  })
+
+  // Ir a Conocé MIA
+  const modalConoce = document.getElementById('modal-conoce');
+  const btnConoce =
+  document.getElementById('btn-conoce').onclick = function() {
+    modalConoce.classList.add('active');
+  };
+  const closeModal = document.getElementById('close-modal').onclick = function() {
+    modalConoce.classList.remove('active');
+  }
+
+  // PREGUNTAS FRECUENTES ACCORDION
+  const questionDisplay = document.querySelectorAll('.question-display');
+
+  questionDisplay.forEach(question => {
+    question.addEventListener('click', function() {
+      this.classList.toggle('active');
+      let expandText = this.nextElementSibling;
+      if(expandText.style.maxHeight) {
+        expandText.style.maxHeight = null;
+      } else {
+        expandText.style.maxHeight = expandText.scrollHeight + 'px';
+      }
+    })
+  })
 
 }

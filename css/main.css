@@ -5,7 +5,8 @@
   --gradient-clr-3: rgba(219, 189, 254, 1);
   --clr-light: rgb(240, 240, 240);
   --clr-mid: rgba(225,225,232,255);
-  --clr-dark: rgb(34, 34, 34);*/
+  --clr-dark: rgb(34, 34, 34);
+  /* --clr-dark: rgb(0, 0, 0); */
 }
 
 /* TYPOGRAPHY */
@@ -125,6 +126,13 @@ a {
   justify-content: center;
   width: 100vw;
   overflow: hidden;
+}
+/* OVERRIDE BOOTSTRAP STYLES */
+.panel {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0;
 }
 
 /* HEADER STYLES */
@@ -602,6 +610,123 @@ nav {
   font-family: 'Apercu Light';
   font-size: 1rem;
   padding-top: 1rem;
+}
+
+/* MODAL: SERVICIOS */
+.modal-servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: var(--gradient-clr-3);
+  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /* transform: translateX(200%); */
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+}
+.modal-servicios.active {
+  transform: translateX(0%);
+}
+.modal-servicios .close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  text-align: center;
+}
+.modal-servicios .close-modal i {
+  font-size: 3rem;
+  color: var(--clr-dark);
+}
+.modal-servicios .modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 130px;
+  text-align: center;
+}
+.modal-title h1 {
+  font-family: "Adieu Bold";
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+.modal-servicios .modal-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 7rem 1rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+.servicios-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-mid);
+  width: 100vw;
+  padding-top: 3rem;
+}
+.servicios-list .list-title {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+}
+.servicios-list-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 3rem;
+}
+.accordion-service {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+.service-display {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 1rem .5rem;
+  cursor: default;
+  transition: 0.4s;
+}
+.active, .service-display:hover {
+  background-color: rgba(210,210,215,255);
+}
+.accordion-service:last-child {
+  border-bottom: 1px solid black;
+}
+.service-display .service {
+  font-family: 'Gotham Bold';
+  text-transform: uppercase;
+}
+.section-preguntas-accordion .expand-text {
+  /* border-top: 1px solid black; */
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.expand-text .list-item {
+  font-family: 'Apercu Light';
+  padding: .5rem 5rem 1rem;
+  border-top: 1px solid black;
+  /* line-height: 1.5; */
+}
+.expand-text .list-item span {
+  font-family: 'Apercu';
+  font-weight: bold;
+}
+.expand-text .list-item a {
+  color: blue;
 }
 
 /* DONDE ENCONTRARNOS STYLES */
