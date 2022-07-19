@@ -732,16 +732,6 @@ nav {
   width: 33.33%;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* MODAL: SERVICIOS */
 .modal-servicios {
   display: flex;
@@ -800,14 +790,18 @@ nav {
   background-color: var(--clr-dark);
   color: var(--clr-light);
 }
-.servicios-list {
+.servicios-list,
+.modal-servicios .modal-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--clr-mid);
-  width: 100vw;
+  width: 100%;
   padding-top: 3rem;
+}
+.modal-servicios .footer-logo {
+  width: 250px;
 }
 .servicios-list .list-title {
   /* border: 1px solid red; */
