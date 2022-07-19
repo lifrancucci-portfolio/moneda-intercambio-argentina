@@ -625,7 +625,7 @@ nav {
   overflow-y: scroll;
   top: 0;
   left: 0;
-  transform: translateX(200%);
+  /* transform: translateX(200%); */
   transition: transform 0.3s ease-out;
   z-index: 1000;
 }
@@ -650,7 +650,10 @@ nav {
   height: 130px;
   text-align: center;
 }
-.modal-title h1 {
+.modal-servicios .modal-title img {
+  width: 3rem;
+}
+.modal-servicios .modal-title h1 {
   font-family: "Adieu Bold";
   font-size: 3rem;
   text-transform: uppercase;
@@ -677,9 +680,21 @@ nav {
   padding-top: 3rem;
 }
 .servicios-list .list-title {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
+  width: 60%;
   align-items: center;
+
+  margin: 1rem 0 5rem;
+}
+.servicios-list .list-title img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.servicios-list .list-title h3 {
+  font-family: "Adieu Bold";
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .servicios-list-accordion {
   display: flex;
