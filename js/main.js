@@ -136,10 +136,22 @@ function contentLoaded() {
   const modalConoce = document.getElementById('modal-conoce');
   const btnConoce =
   document.getElementById('btn-conoce').onclick = function() {
+    disableScroll();
     modalConoce.classList.add('active');
   };
   const closeConoce = document.getElementById('close-conoce').onclick = function() {
+    enableScroll();
     modalConoce.classList.remove('active');
+  }
+
+
+  // MODAL BARES Y RESTAURANTES
+  const modalBares = document.getElementById('modal-bares');
+  const btnBares = document.getElementById('btn-bares').onclick = function() {
+    modalBares.classList.add('active');
+  };
+  const closeBares = document.getElementById('close-bares').onclick = function() {
+    modalBares.classList.remove('active');
   }
 
   // MODAL SERVICIOS
@@ -148,7 +160,7 @@ function contentLoaded() {
   document.getElementById('btn-servicios').onclick = function() {
     modalServicios.classList.add('active');
   };
-  const closeServicios = document.getElementById('close-modal').onclick = function() {
+  const closeServicios = document.getElementById('close-servicios').onclick = function() {
     modalServicios.classList.remove('active');
   }
 

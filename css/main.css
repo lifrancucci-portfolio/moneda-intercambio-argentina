@@ -6,6 +6,7 @@
   --clr-light: rgb(240, 240, 240);
   --clr-mid: rgba(225,225,232,255);
   --clr-dark: rgb(34, 34, 34);
+  --clr-link-hover: #428bca;
   /* --clr-dark: rgb(0, 0, 0); */
 }
 
@@ -41,13 +42,6 @@
   src: url(../fonts/apercu-medium.otf);
   /* font-weight: normal; */
 }
-/* @font-face {
-  font-family: 'Gotham';
-  src:
-    url(../fonts/gotham-book.otf) format('truetype') font-weight-lighter,
-    url(../fonts/gotham-medium.otf) format('truetype') font-weight-normal,
-    url(../fonts/gotham-bold.otf) format('truetype') font-weight-bold,
-} */
 @font-face {
   font-family: 'Gotham';
   src: url(../fonts/gotham-medium.otf);
@@ -100,8 +94,11 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-a {
+a, .link {
   cursor: pointer;
+}
+a:hover, .link:hover {
+  color: #428bca;
 }
 .button {
   background-color: white;
@@ -134,6 +131,10 @@ a {
   border-radius: 0;
   box-shadow: 0;
 }
+.modal-footer {
+  border-top: 0;
+}
+/* FIN OVERRIDE BOOTSTRAP */
 
 /* HEADER STYLES */
 header {
@@ -612,6 +613,135 @@ nav {
   padding-top: 1rem;
 }
 
+/* MODAL: BARES Y RESTAURANTES */
+.modal-bares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: absolute; */
+  background: var(--gradient-clr-3);
+  background: linear-gradient(220deg, var(--gradient-clr-3) 0%, var(--gradient-clr-2) 50%, var(--gradient-clr-1) 100%);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  transform: translateX(200%);
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+}
+.modal-bares.active {
+  transform: translateX(0%);
+}
+.modal-bares .close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  text-align: center;
+}
+.modal-bares .close-modal i {
+  font-size: 3rem;
+  color: var(--clr-dark);
+}
+.modal-bares .modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 130px;
+  text-align: center;
+}
+.modal-bares .modal-title img {
+  width: 3rem;
+}
+.modal-bares .modal-title h1 {
+  font-family: "Adieu Bold";
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+.modal-bares .modal-text,
+.modal-bares .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 7rem 1rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+.modal-bares .footer-logo {
+  width: 350px;
+}
+.bares-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-mid);
+  width: 100vw;
+}
+.bares-list .list-item {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+}
+.list-item .item-column {
+  width: 50%;
+}
+.bares-list .item-text {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  /* margin: 1rem 0 5rem; */
+}
+.bares-list .item-title {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+.bares-list .item-title img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.bares-list .item-title h3 {
+  font-family: "Adieu Bold";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.bares-list .item-text p {
+  padding-top: 10rem;
+  padding-left: 7rem;
+  height: 100%;
+  line-height: 3;
+}
+.bares-list .item-text i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+.item-column .wide-img img {
+  width: 100%;
+}
+.item-column .small-img {
+  display: flex;
+}
+.item-column .small-img img {
+  width: 33.33%;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* MODAL: SERVICIOS */
 .modal-servicios {
   display: flex;
@@ -632,13 +762,13 @@ nav {
 .modal-servicios.active {
   transform: translateX(0%);
 }
-.modal-servicios .close-servicios {
+.modal-servicios .close-modal {
   position: absolute;
   top: 1rem;
   right: 3rem;
   text-align: center;
 }
-.modal-servicios .close-servicios i {
+.modal-servicios .close-modal i {
   font-size: 3rem;
   color: var(--clr-dark);
 }
